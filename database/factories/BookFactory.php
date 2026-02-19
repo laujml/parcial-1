@@ -12,8 +12,8 @@ class BookFactory extends Factory
         $copiasDisponibles = $this->faker->numberBetween(0, $copiasTotales);
 
         return [
-            'titulo'             => $this->faker->sentence(3),
-            'descripcion'        => $this->faker->paragraph(2),
+            'titulo'             => $this->faker->realText(30),
+            'descripcion'        => $this->faker->realText(100),
             'isbn'               => $this->faker->unique()->isbn13(),
             'copias_totales'     => $copiasTotales,
             'copias_disponibles' => $copiasDisponibles,
